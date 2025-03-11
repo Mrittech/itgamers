@@ -1,0 +1,105 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #6ac7da;
+}
+.box{
+    width: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #c3f5ff;
+    text-align: center;
+    background: transparent(90%);
+    text-transform: capitalize;
+
+}
+.box h1{
+    
+    font-family: cursive;
+    text-align: center;
+    font-weight: 700;
+    -moz-text-decoration-style: solid;
+    /* animation: aagepiche 2s linear infinite; */
+    /* animation-direction: alternate; */
+    
+}
+.in{
+    font-family: fantasy;
+    font-size: large;
+}
+.btn1{
+    width: 300px;
+    font-size: larger;
+    background-color: rgba(67, 238, 224, 0.932);
+    font-style: initial;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btn{
+
+
+	border: 2px solid #4458dc;
+	color: #222;
+	background-color: #fff;
+	box-shadow: none;
+
+    width:100px;
+    font-size: larger;
+    font-style: initial;
+    cursor: pointer;
+    background: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.p{
+    width: 200px;
+    font-size: large;
+    font-family: serif;
+    background: transparent;
+    line-height: 30px;
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    animation-name: initial;
+
+}
+.p :-ms-input-placeholder{
+    /* text-decoration: none; */
+    /* text-align: center; */
+}
+.sign{
+    color:black;
+    font-family: cursive;
+    cursor: pointer;
+    text-align: center;
+    width: 300px;
+    text-decoration: none;
+    font-size: larger;
+    margin-block-end: 40px;
+}
+.sign h1{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aqua;
+    border: 30px;
+    text-decoration: none;
+}
+.fp{
+    text-align: left;
+    text-decoration: none;
+}
+.main h1{
+    text-align: start;
+    text-transform: initial;
+    color: black;
+    
+}
+
+
+
+.text{
+    text-align: left;
+    padding-left: 30px;
+}
