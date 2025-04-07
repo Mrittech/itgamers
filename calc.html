@@ -77,6 +77,19 @@
         }
 
        
+        function calculateSquareRoot() {
+            const resultField = document.getElementById('result');
+            try {
+                const value = parseFloat(resultField.value);
+                if (isNaN(value)) {
+                    resultField.value = 'Error';
+                } else {
+                    resultField.value = Math.sqrt(value);
+                }
+            } catch {
+                resultField.value = 'Error';
+            }
+        }
     </script>
 </head>
 <nav style="position: absolute; top: 10px; left: 10px;"></nav>
