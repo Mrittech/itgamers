@@ -13,16 +13,16 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f4f4f4;
+            background-color: black;
         }
 
         .calculator {
             width: 90%;
             max-width: 400px;
-            background: #fff;
+            background: #000;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
         }
 
         .calculator input[type="text"] {
@@ -32,8 +32,10 @@
             font-size: 1.2em;
             text-align: right;
             padding: 5px;
-            border: 1px solid #ccc;
+            border: 1px solid #0f0;
             border-radius: 5px;
+            background-color: black;
+            color: green;
         }
 
         .calculator button {
@@ -43,8 +45,8 @@
             font-size: 1.2em;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
+            background-color: black;
+            color: green;
             cursor: pointer;
         }
 
@@ -56,6 +58,7 @@
             width: 47%;
         }
     </style>
+    
     <script>
         function appendValue(value) {
             document.getElementById('result').value += value;
@@ -72,9 +75,16 @@
                 document.getElementById('result').value = 'Error';
             }
         }
+
+       
     </script>
 </head>
+<nav style="position: absolute; top: 10px; left: 10px;"></nav>
+    <a href="index.html" style="text-decoration: none; font-size: 1.2em; color: #007BFF;">&larr; Back</a>
+</nav>
 <body>
+
+    
     <div class="calculator">
         <input type="text" id="result" disabled>
         <div>
@@ -129,5 +139,7 @@
             }
         }
     </script>
+
+  
 </body>
 </html>
