@@ -1,138 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"><title>it Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: rgb(241, 240, 240);
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background-color: black;
+            height: 100vh;
+            margin: 0;
         }
-
-        .calculator {
-            width: 90%;
-            max-width: 400px;
-            background: #000;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
-        }
-
-        .calculator input[type="text"] {
-            width: 100%;
-            height: 50px;
-            margin-bottom: 10px;
-            font-size: 1.2em;
-            text-align: right;
-            padding: 5px;
-            border: 1px solid #0f0;
-            border-radius: 5px;
-            background-color: black;
-            color: green;
-        }
-
-        .calculator button {
-            width: 22%;
-            height: 50px;
-            margin: 1%;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            background-color: black;
-            color: green;
-            cursor: pointer;
-        }
-
-        .calculator button:active {
-            background-color: #0056b3;
-        }
-
-        .calculator .wide {
-            width: 47%;
+        #calculator {
+            border: 2px solid black; /* Added black border */
         }
     </style>
-    
-    <script>
-        function appendValue(value) {
-            document.getElementById('result').value += value;
-        }
-
-        function clearResult() {
-            document.getElementById('result').value = '';
-        }
-
-        function calculateResult() {
-            try {
-                document.getElementById('result').value = eval(document.getElementById('result').value);
-            } catch {
-                document.getElementById('result').value = 'Error';
-            }
-        }
-
-       
-        function calculateSquareRoot() {
-            const resultField = document.getElementById('result');
-            try {
-                const value = parseFloat(resultField.value);
-                if (isNaN(value)) {
-                    resultField.value = 'Error';
-                } else {
-                    resultField.value = Math.sqrt(value);
-                }
-            } catch {
-                resultField.value = 'Error';
-            }
-        }
-    </script>
 </head>
-<nav style="position: absolute; top: 10px; left: 10px;"></nav>
-    <a href="index.html" style="text-decoration: none; font-size: 1.2em; color: #007BFF;">&larr; Back</a>
-</nav>
-<body>
-
-    
-    <div class="calculator">
-        <input type="text" id="result" disabled>
-        <div>
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button onclick="clearResult()"><---</button>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #9afa5a; font-family: Arial, sans-serif;">
+    <div id="calculator" style="background: #80b3e4; padding: 50px; border-radius: 20px; box-shadow: 100 4px 10px rgba(248, 247, 247, 0.2); text-align: center;">
+        <input type="text" id="result" disabled style="width: 100%; padding: 10px; margin-bottom: 10px; font-size: 1.2em; text-align: right; border: 1px solid #ccc; border-radius: 5px;">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+            <button onclick="calculateSquareRoot()" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #66ccff; color: white; cursor: pointer;">√</button>
+            <button onclick="appendValue('7')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">7</button>
             
-        </div>
-        <div>
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button onclick="appendValue('/')">/</button>
-        </div>
-        <div>
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button onclick="appendValue('*')">*</button>
-        </div>
-        <div>
-            <button onclick="appendValue('0')">0</button>
-            <button onclick="appendValue('.')">.</button>
+            <button onclick="appendValue('8')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">8</button>
+            <button onclick="appendValue('9')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">9</button>
+            <button onclick="clearResult()" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #ff6666; color: white; cursor: pointer;"><--</button>
+            <button onclick="appendValue('4')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">4</button>
+            <button onclick="appendValue('5')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">5</button>
+            <button onclick="appendValue('6')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">6</button>
+            <button onclick="appendValue('/')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #ffcc66; cursor: pointer;">/</button>
+            <button onclick="appendValue('1')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">1</button>
+            <button onclick="appendValue('2')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">2</button>
+            <button onclick="appendValue('3')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">3</button>
+            <button onclick="appendValue('*')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #ffcc66; cursor: pointer;">*</button>
+            <button onclick="appendValue('0')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">0</button>
+            <button onclick="appendValue('.')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #f9f9f9; cursor: pointer;">.</button>
             
-            <button onclick="appendValue('(')">(</button>
-            <button onclick="appendValue(')')">)</button>
-            <button onclick="calculateSquareRoot()">√</button>
-            <button onclick="appendValue('+')">+</button>
-            <button onclick="appendValue('-')">-</button>
-        </div>
-        <div>
-            
-            <button class="wide" onclick="calculateResult()">=</button>
+            <button onclick="appendValue('-')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #ffcc66; cursor: pointer;">-</button>
+            <button onclick="appendValue('+')" style="padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #ffcc66; cursor: pointer;">+</button>
+            <button onclick="calculateResult()" style="grid-column: span 4; padding: 15px; font-size: 1em; border: none; border-radius: 5px; background: #ffcc66; cursor: pointer;">=</button>
         </div>
     </div>
 
@@ -148,12 +57,23 @@
         function calculateResult() {
             try {
                 document.getElementById('result').value = eval(document.getElementById('result').value);
-            } catch {
+            } catch (e) {
                 document.getElementById('result').value = 'Error';
             }
         }
+        function calculateSquareRoot() {
+            const resultField = document.getElementById('result');
+            try {
+                const value = parseFloat(resultField.value);
+                if (isNaN(value)) {
+                    resultField.value = 'Error';
+                } else {
+                    resultField.value = Math.sqrt(value);
+                }
+            } catch (e) {
+                resultField.value = 'Error';
+            }
+        }
     </script>
-
-  
 </body>
 </html>
